@@ -12,48 +12,39 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/media-query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-
-    <header>
-        <div class="container mx-auto">
-            <nav class="flex justify-between items-center bg-color-red">
-                <a href="index.html"> LOGO JV BIENES RAICES</a>
-                
-                <ul class="nav-menu  flex justify-between items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Inicio</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Nosotros</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Servicios</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Propiedades</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Contacto</a>
-                    </li>
-
-                </ul>
-
-                <div class="hamburger cursor-pointer hidden">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-
-            </nav>
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="index.html">LOGO</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Propiedades</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
         </div>
+      </nav>
 
-    </header>
-    <script src="assets/scripts/main.js"></script>
+
+      <div class="banner">
+
+      </div>
+      
+
+      
+
+      <script src="assets/scripts/main.js"></script>
     
 </body>
 </html>
