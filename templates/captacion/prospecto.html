@@ -1,1 +1,119 @@
-hola prospecto
+{% extends '_base.html' %}
+
+{% block content %}
+{% include '_navbar.html' %}
+
+<main class="pt-32 flex justify-center">
+    <div class="border sm:w-1/2 w-full">
+        <form class="form-horizontal" method="post">
+            {% csrf_token %}
+            <fieldset>
+            
+            <!-- Form Name -->
+            <legend>Vende tu casa</legend>
+            
+            <!-- Text input-->
+            <div class="field">
+              <label class="label" for="nombre_dueno">Nombre Completo</label>
+              <div class="control">
+                <input id="nombre_dueno" name="nombre_dueno" type="text" placeholder="Nombre Completo" class="input is-small" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Multiple Radios -->
+            <div class="field">
+              <label class="label" for="municipio">¿En qué municipio se encuentra tu casa?</label>
+              <div class="control">
+                <label class="radio" for="municipio-0">
+                  <input type="radio" name="municipio" id="municipio-0" value="Tampico" checked="checked">
+                  Tampico
+                </label>
+                <label class="radio" for="municipio-1">
+                  <input type="radio" name="municipio" id="municipio-1" value="Madero">
+                  Madero
+                </label>
+                <label class="radio" for="municipio-2">
+                  <input type="radio" name="municipio" id="municipio-2" value="Altamira">
+                  Altamira
+                </label>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="field">
+              <label class="label" for="colonia">¿En qué colonia se encuentra tu casa?</label>
+              <div class="control">
+                <input id="colonia" name="colonia" type="text" placeholder="Colonia" class="input is-small" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Textarea -->
+            <div class="field">
+              <label class="label" for="estado">¿En qué estado se encuentra tu propiedad?</label>
+              <div class="control">                     
+                <textarea class="textarea" id="estado" name="estado"></textarea>
+              </div>
+            </div>
+            
+            <!-- Multiple Radios -->
+            <div class="field">
+              <label class="label" for="tipo_credito">¿Qué tipo de hipoteca tienes?</label>
+              <div class="control">
+                <label class="radio" for="tipo_credito-0">
+                  <input type="radio" name="tipo_credito" id="tipo_credito-0" value="Infonavit" checked="checked">
+                  Infonavit
+                </label>
+                <label class="radio" for="tipo_credito-1">
+                  <input type="radio" name="tipo_credito" id="tipo_credito-1" value="Fovissste">
+                  Fovissste
+                </label>
+                <label class="radio" for="tipo_credito-2">
+                  <input type="radio" name="tipo_credito" id="tipo_credito-2" value="Bancario">
+                  Bancario
+                </label>
+                <label class="radio" for="tipo_credito-3">
+                  <input type="radio" name="tipo_credito" id="tipo_credito-3" value="No tengo crédito">
+                  No tengo crédito
+                </label>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="field">
+              <label class="label" for="saldo">¿Cuál es el saldo aproximado de tu hipoteca actualmente?</label>
+              <div class="control">
+                <input id="saldo" name="saldo" type="text" placeholder="$200,000" class="input ">
+                <p class="help">Si no lo recuerdas, dejalo en blanco</p>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="field">
+              <label class="label" for="nss">Si gustas, déjanos tu Número de Seguro Social y nosotros consultamos tu saldo actual</label>
+              <div class="control">
+                <input id="nss" name="nss" type="text" placeholder="12345678910" class="input ">
+                <p class="help">Tu NSS es de 11 dígitos</p>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="field">
+              <label class="label" for="whatsapp">Whatsapp</label>
+              <div class="control">
+                <input id="whatsapp" name="whatsapp" type="text" placeholder="8331234567" class="input " required="">
+                <p class="help">Te notificaremos a este número si eres candidato a traspaso</p>
+              </div>
+            </div>
+            
+            </fieldset>
+
+            <button class="button is-primary">Submit</button>
+            </form>
+
+    </div>
+</main>
+
+
+{% endblock content %}

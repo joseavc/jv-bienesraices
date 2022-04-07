@@ -8,15 +8,17 @@ class PropiedadForm(forms.Form):
     """Propiedad Form"""
     nombre_dueno = forms.CharField()
     municipio = forms.CharField()
+    colonia = forms.CharField()
     estado = forms.Textarea
     tipo_credito = forms.CharField()
     saldo = forms.CharField(required=False)
     nss = forms.IntegerField(required=False)
-    whatsapp = forms.IntegerField()
+    whatsapp = forms.CharField()
 
     def clean(self):
         nombre_dueno = self.cleaned_data.get("nombre_dueno")
         municipio = self.cleaned_data.get("municipio")
+        colonia = self.cleaned_data.get("colonia")
         estado = self.cleaned_data.get("estado")
         tipo_credito = self.cleaned_data.get("tipo_credito")
         saldo = self.cleaned_data.get("saldo")
@@ -26,6 +28,7 @@ class PropiedadForm(forms.Form):
         prop_exists = Propiedad.objects.filter(
             nombre_dueno = nombre_dueno,
             municipio = municipio,
+            colonia = colonia,
             whatsapp = whatsapp
         ).exists()
 
@@ -47,6 +50,7 @@ class PropiedadModelForm(forms.ModelForm):
     def clean(self):
         nombre_dueno = self.cleaned_data.get("nombre_dueno")
         municipio = self.cleaned_data.get("municipio")
+        colonia = self.cleaned_data.get("colonia")
         estado = self.cleaned_data.get("estado")
         tipo_credito = self.cleaned_data.get("tipo_credito")
         saldo = self.cleaned_data.get("saldo")
@@ -56,6 +60,7 @@ class PropiedadModelForm(forms.ModelForm):
         prop_exists = Propiedad.objects.filter(
             nombre_dueno = nombre_dueno,
             municipio = municipio,
+            colonia = colonia,
             whatsapp = whatsapp
         ).exists()
 

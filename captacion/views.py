@@ -10,6 +10,7 @@ from .models import Propiedad
 def crear_prospecto(request):
     form = PropiedadForm()
     if request.method == 'POST':
+        print("Se submiteo")
         form = PropiedadForm(request.POST)
         if form.is_valid():
             form.save()
