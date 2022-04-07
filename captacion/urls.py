@@ -4,7 +4,7 @@ URL's de Captacion App
 
 from django.urls import path
 
-from index_app.views import hola
+from index_app.views import index
 from .views import *
 
 app_name = 'captacion'

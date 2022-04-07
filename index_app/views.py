@@ -3,5 +3,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def hola(request):
+def index(request):
     return render(request, "index_app/index.html")
