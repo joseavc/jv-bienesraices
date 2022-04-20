@@ -2,7 +2,48 @@
 
 {% block content %}
 {% include '_navbar.html' %}
-<section class="" id="servicios">
+<section class="">
+    <div class="container mx-auto">
+        <h2 class="text-center my-8">Mas Sobre Nosotros</h2>
+
+        <div class="flex flex-col justify-between md:flex-row">
+            <div class="w-5/12 border">
+                <img src="/static/img/Nosotros.png" alt="compra">
+            </div>
+
+            <div class="w-1/2  text-justify ">
+                <div>
+                    <p>En JV Bienes Raices nos dedicamos a la compra, venta, remodelación y rehabilitación de viviendas. </p>
+                    <p>Ayudamos a las familias a encontrar su hogar en el mercado de interés social.
+                    </p>
+                    <p>Trabajamos en las ciudades de Tampico, Madero y Altamira, en el Estado de Tamaulipas.</p>
+                </div>
+
+                <div class="flex text-justify justify-between mt-10">
+                    <div class="w-5/12">
+                        <h4>Misión</h4>
+                        <p>"Asistir a nuestra comunidad en la compra/venta y remodelación de sus viviendas, buscando la mejor solución y sacar el mayor beneficio a la problemática que esté atravesando nuestro cliente"</p>
+                        <p>"Mejorar nuestro entorno eliminando focos de vandalismo a través de la remodelación y/o rehabilitación de viviendas deshabitadas, abandonadas o vandalizadas, haciendo posible la venta de una vivienda digna a una nueva familia"</p>
+                    </div>
+                    
+                    <div class="w-5/12">
+                        <h4>Visión</h4>
+                        <p>"Convertir a JV Bienes Raices en una empresa reconocida en el ramo inmobiliario de la región de Tampico, Madero y Altamira, dando a nuestros clientes la mejor solución posible a sus necesidades, ya sea vendiendo o comprando su vivienda."</p>
+                    </div>
+                    
+                </div>
+
+                
+
+            </div>
+
+            
+        </div>
+        
+    </div>
+</section>
+
+<section class="bgc-s" id="servicios">
     <h2 class="text-center my-8">Servicios</h2>
 
     <div class="container mx-auto">
@@ -13,7 +54,7 @@
                 <div>
                     <div class="text-center">
                         <h3>¿Sigues pagando tu crédito INFONAVIT que ya NO QUIERES?</h3>
-                        <h3>Vende tu Casa</h3>
+                        <h3>Te ayudamos a Venderla</h3>
                     </div>
                     
 
@@ -48,8 +89,8 @@
 
             </div>
 
-            <div class="border w-5/12">
-                IMG
+            <div class="w-5/12">
+                <img src="/static/img/vende.jpg" alt="vende">
             </div>
         </div>
 
@@ -57,8 +98,8 @@
 
         <!-- Compra tu casa -->
         <div class="flex justify-between">
-            <div class="border w-5/12">
-                IMG
+            <div class="w-5/12">
+                <img src="/static/img/compra.jpg" alt="compra">
             </div>
 
             <div class="w-1/2 flex flex-col text-center">
@@ -84,14 +125,6 @@
     
 </section>
 
-<section class="bgc-s">
-    <div class="container mx-auto">
-        <h2 class="text-center">Mas Sobre Nosotros</h2>
-
-        
-    </div>
-</section>
-
 <section class="">
     <div class="container mx-auto">
         <h2 class="text-center">Propiedades</h2>
@@ -105,4 +138,6 @@
         <h2 class="text-center">Contacto</h2>  
     </div>
 </section>
+
+{% include '_footer.html' %}
 {% endblock content %}
