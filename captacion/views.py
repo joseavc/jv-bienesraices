@@ -3,7 +3,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic as generic_views
 
-from .forms import PropiedadForm, PropiedadModelForm
+from .forms import PropiedadForm
 from .models import Propiedad
 
 #Normal Form

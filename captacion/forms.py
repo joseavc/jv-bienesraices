@@ -9,7 +9,7 @@ class PropiedadForm(forms.Form):
     nombre_dueno = forms.CharField()
     municipio = forms.CharField()
     colonia = forms.CharField()
-    estado = forms.Textarea
+    estado = forms.CharField()
     tipo_credito = forms.CharField()
     saldo = forms.CharField(required=False)
     nss = forms.IntegerField(required=False)

@@ -4,13 +4,13 @@
 {% include '_navbar.html' %}
 
 <main class="pt-32 flex justify-center">
-    <div class="border sm:w-1/2 w-full">
+    <div class=" sm:w-1/2 w-full">
         <form class="form-horizontal" method="post">
             {% csrf_token %}
             <fieldset>
             
             <!-- Form Name -->
-            <legend>Vende tu casa</legend>
+            <h2 class="text-center">Vende tu casa</h2>
             
             <!-- Text input-->
             <div class="field">
@@ -109,7 +109,7 @@
             
             </fieldset>
 
-            <button class="button is-primary">Submit</button>
+            <button class="button is-primary">Enviar</button>
             </form>
 
     </div>

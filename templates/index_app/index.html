@@ -6,12 +6,12 @@
     <div class="container mx-auto">
         <h2 class="text-center my-8">Mas Sobre Nosotros</h2>
 
-        <div class="flex flex-col justify-between md:flex-row">
-            <div class="w-5/12 border">
+        <div class="flex flex-col items-center justify-between md:flex-row">
+            <div class="w-auto md:w-5/12">
                 <img src="/static/img/Nosotros.png" alt="compra">
             </div>
 
-            <div class="w-1/2  text-justify ">
+            <div class="w-auto md:w-1/2  text-justify ">
                 <div>
                     <p>En JV Bienes Raices nos dedicamos a la compra, venta, remodelación y rehabilitación de viviendas. </p>
                     <p>Ayudamos a las familias a encontrar su hogar en el mercado de interés social.
@@ -23,7 +23,6 @@
                     <div class="w-5/12">
                         <h4>Misión</h4>
                         <p>"Asistir a nuestra comunidad en la compra/venta y remodelación de sus viviendas, buscando la mejor solución y sacar el mayor beneficio a la problemática que esté atravesando nuestro cliente"</p>
-                        <p>"Mejorar nuestro entorno eliminando focos de vandalismo a través de la remodelación y/o rehabilitación de viviendas deshabitadas, abandonadas o vandalizadas, haciendo posible la venta de una vivienda digna a una nueva familia"</p>
                     </div>
                     
                     <div class="w-5/12">
@@ -49,8 +48,8 @@
     <div class="container mx-auto">
 
         <!-- Vende tu casa -->
-        <div class="flex justify-between">
-            <div class="w-1/2 flex flex-col items-center">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="w-auto md:w-1/2 flex flex-col items-center">
                 <div>
                     <div class="text-center">
                         <h3>¿Sigues pagando tu crédito INFONAVIT que ya NO QUIERES?</h3>
@@ -84,12 +83,12 @@
                     
 
                 </div>
-                <a href="#"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full my-8">Me interesa</button></a>
+                <a href="{% url 'captacion:crearprospecto' %}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full my-8">Me interesa</button></a>
                 
 
             </div>
 
-            <div class="w-5/12">
+            <div class="w-auto md:w-5/12">
                 <img src="/static/img/vende.jpg" alt="vende">
             </div>
         </div>
@@ -97,12 +96,12 @@
         <hr/>
 
         <!-- Compra tu casa -->
-        <div class="flex justify-between">
-            <div class="w-5/12">
+        <div class="md:flex md:justify-between">
+            <div class="w-5/12 hidden md:block">
                 <img src="/static/img/compra.jpg" alt="compra">
             </div>
 
-            <div class="w-1/2 flex flex-col text-center">
+            <div class="w-auto md:w-1/2 flex flex-col text-center">
                 <div>
                     <h3>Compra tu Casa</h3>
                     <h3>Encuentra tu hogar en Tampico, Madero o Altamira</h3>
@@ -123,20 +122,6 @@
         
     </div>
     
-</section>
-
-<section class="">
-    <div class="container mx-auto">
-        <h2 class="text-center">Propiedades</h2>
-
-        
-    </div>
-</section>
-
-<section class="bgc-s">
-    <div class="container mx-auto">
-        <h2 class="text-center">Contacto</h2>  
-    </div>
 </section>
 
 {% include '_footer.html' %}

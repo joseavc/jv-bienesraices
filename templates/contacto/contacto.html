@@ -1,0 +1,77 @@
+{% extends '_base.html' %}
+
+{% block content %}
+{% include '_navbar.html' %}
+
+<main class="pt-32 flex justify-center">
+    <div class=" sm:w-1/2 w-full">
+        <form class="form-horizontal" method="POST" >
+            {% csrf_token %}
+            <fieldset>
+            
+            <!-- Form Name -->
+            <h2 class="text-center">Contacto</h2>
+            
+            <!-- Text input-->
+            <div class="field">
+              <label class="label" for="nombre"></label>
+              <div class="control">
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre Completo" class="input " required="">
+                
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="field">
+              <label class="label" for="correo"></label>
+              <div class="control">
+                <input id="correo" name="correo" type="text" placeholder="Correo electrónico" class="input " required="">
+                
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="field">
+              <label class="label" for="telefono"></label>
+              <div class="control">
+                <input id="telefono" name="telefono" type="text" placeholder="Teléfono" class="input " required="">
+                
+              </div>
+            </div>
+
+            <!-- Multiple Radios -->
+            <div class="field">
+              <label class="label" for="interes">Me Interesa:</label>
+              <div class="control">
+                <label class="radio" for="interes-0">
+                  <input type="radio" name="interes" id="interes-0" value="Comprar" checked="checked">
+                  Comprar
+                </label>
+                <label class="radio" for="interes-1">
+                  <input type="radio" name="interes" id="interes-1" value="Vender">
+                  Vender
+                </label>
+                <label class="radio" for="interes-2">
+                  <input type="radio" name="interes" id="interes-2" value="Otro">
+                  Otro
+                </label>
+              </div>
+            </div>
+            
+            <!-- Textarea -->
+            <div class="field">
+              <label class="label" for="mensaje">Preguntas</label>
+              <div class="control">                     
+                <textarea class="textarea" id="mensaje" name="mensaje"></textarea>
+              </div>
+            </div>
+            
+            </fieldset>
+            <button class="button is-primary">Enviar</button>
+            </form>
+
+    </div>
+</main>
+
+{% include '_footer.html' %}
+{% endblock content %}
