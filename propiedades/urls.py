@@ -8,5 +8,6 @@ from .views import *
 app_name = 'propiedades'
 
 urlpatterns = [
-    path("", hola)
+    path("", lista_propiedades, name="lista_propiedades"),
+    path("<int:pk>", ver_propiedad, name="ver_propiedad"),
 ]

@@ -3,15 +3,15 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic as generic_views
 
-from .forms import PropiedadForm
-from .models import Propiedad
+from .forms import ProspectoForm
+from .models import Prospecto
 
 #Normal Form
 def crear_prospecto(request):
-    form = PropiedadForm()
+    form = ProspectoForm()
     if request.method == 'POST':
         print("Se submiteo")
-        form = PropiedadForm(request.POST)
+        form = ProspectoForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect("captacion:enviado")

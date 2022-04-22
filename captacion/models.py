@@ -1,7 +1,7 @@
 from django.db import models
 
-class Propiedad(models.Model):
-    """Modelo de Propiedad para la app captacion"""
+class Prospecto(models.Model):
+    """Modelo de Prospecto para la app captacion"""
     nombre_dueno = models.CharField(max_length=50)
     municipio = models.CharField(max_length=10)
     colonia = models.CharField(max_length=30)

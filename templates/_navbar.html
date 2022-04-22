@@ -1,6 +1,6 @@
 {% load static %}
 
-<nav class="navbar">
+<!-- <nav class="navbar">
     <div class="content container mx-auto">
       <div class="logo">
         <a href="{% url 'index_app:index' %}">
@@ -10,10 +10,65 @@
       <ul class="menu-list">
         <li><a href="{% url 'index_app:index' %}">Nosotros</a></li>
         <li><a href="{% url 'index_app:index' %}#servicios">Servicios</a></li>
-        <li><a href="#">Propiedades</a></li>
+        <li><a href="{% url 'propiedades:lista_propiedades' %}">Propiedades</a></li>
         <li><a href="{% url 'contacto:contacto' %}">Contacto</a></li>
       </ul>
       
     </div>
-</nav>
+</nav> -->
 
+<nav class="navbar navbarbg">
+  <div class="mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="content container mx-auto">
+        <div class="logo">
+          <a href="{% url 'index_app:index' %}">
+              <img src="{% static 'img/Imagotipo-Blanco.svg' %}" alt="logotipo">
+          </a>
+        </div>
+        <ul class="menu-list">
+          <li><a href="{% url 'index_app:index' %}">Nosotros</a></li>
+          <li><a href="{% url 'index_app:index' %}#servicios">Servicios</a></li>
+          <li><a href="{% url 'propiedades:lista_propiedades' %}">Propiedades</a></li>
+          <li><a href="{% url 'contacto:contacto' %}">Contacto</a></li>
+        </ul>
+        
+      </div>
+     
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button class="outline-none mobile-menu-button">
+        <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+          x-show="!showMenu"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      </div>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <div class="hidden mobile-menu">
+    <ul class="">
+      <li class="active"><a href="{% url 'index_app:index' %}" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Nosotros</a></li>
+      <li><a href="{% url 'index_app:index' %}#servicios" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Servicios</a></li>
+      <li><a href="{% url 'propiedades:lista_propiedades' %}" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Propiedades</a></li>
+      <li><a href="{% url 'contacto:contacto' %}" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contacto</a></li>
+    </ul>
+  </div>
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</nav>
+  
