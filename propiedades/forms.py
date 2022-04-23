@@ -28,6 +28,6 @@ class ClienteCompradorForm(forms.Form):
 
         return self.cleaned_data
 
-    def save(self):
-        cliente = ClienteComprador(**self.cleaned_data)
+    def save(self, propiedad_interes_id):
+        cliente = ClienteComprador(propiedad_interes_id=propiedad_interes_id,**self.cleaned_data)
         return cliente.save()

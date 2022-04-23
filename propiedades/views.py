@@ -14,9 +14,6 @@ def ver_propiedad(request, pk):
     if request.method == 'POST':
         form = ClienteCompradorForm(request.POST)
         if form.is_valid():
-            form.save()
-
-            
-
+            form.save(pk)
             return redirect("contacto:enviado")
     return render(request, "propiedades/detalle.html", {"propiedad": propiedad})
