@@ -11,7 +11,6 @@ from .models import Cliente
 def crear_cliente(request):
     form = ClienteForm()
     if request.method == 'POST':
-        print("Se submiteo")
         form = ClienteForm(request.POST)
         if form.is_valid():
             form.save()
