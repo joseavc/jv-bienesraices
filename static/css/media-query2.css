@@ -44,19 +44,7 @@
   .icon.hide{
     display: none;
   }
-  .navbar .menu-list{
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    max-width: 400px;
-    left: -100%;
-    top: 0px;
-    display: block;
-    
-    text-align: center;
-    background: #222;
-    transition: all 0.3s ease;
-  }
+  
   .navbar.show .menu-list{
     left: 0%;
   }

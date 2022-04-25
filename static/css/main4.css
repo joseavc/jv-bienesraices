@@ -77,9 +77,7 @@ hr {
 .navbar .logo a img{
   width: 120px;
 }
-.navbar .menu-list{
-  display: inline-flex;
-}
+
 .menu-list li{
   list-style: none;
 }
