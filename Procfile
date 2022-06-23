@@ -1,0 +1,1 @@
+web: gunicorn jv-bienesraices.wsgi --log-file -
